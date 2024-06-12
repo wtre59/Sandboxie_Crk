@@ -114,7 +114,7 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <QtInstall>Qt5.15.13_msvc2019_64</QtInstall>
+    <QtInstall>msvc2019_64</QtInstall>
     <QtModules>core;network;gui;widgets;qml;winextras;concurrent;widgets-private;qml-private</QtModules>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="QtSettings">
@@ -440,8 +440,10 @@
     <ClCompile Include="Wizards\NewBoxWizard.cpp" />
     <ClCompile Include="Wizards\SetupWizard.cpp" />
     <ClCompile Include="Wizards\TemplateWizard.cpp" />
+    <ClCompile Include="Windows\TestProxyDialog.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="Windows\TestProxyDialog.h" />
     <QtMoc Include="Windows\CompressDialog.h" />
     <QtMoc Include="Wizards\BoxAssistant.h" />
     <QtMoc Include="Windows\BoxImageWindow.h" />
@@ -508,6 +510,7 @@
     <QtUic Include="Forms\SelectBoxWindow.ui" />
     <QtUic Include="Forms\SettingsWindow.ui" />
     <QtUic Include="Forms\SnapshotsWindow.ui" />
+    <QtUic Include="Forms\TestProxyDialog.ui" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\finder.cur" />
